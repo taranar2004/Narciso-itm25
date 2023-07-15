@@ -33,8 +33,7 @@ def savings(gross_pay, tax_rate, expenses):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    import math
-    remaining_money = int(gross_pay) - math.floor(int(gross_pay) * tax_rate) - int(expenses)
+    remaining_money = int(gross_pay - (gross_pay * tax_rate) - expenses)
     return remaining_money
 
 def material_waste(total_material, material_units, num_jobs, job_consumption):
@@ -70,7 +69,7 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    remaining_material = int(total_material) - int(job_consumption) * int(num_jobs)
+    remaining_material = int(total_material - job_consumption * num_jobs)
     with_unit = f"{remaining_material}{material_units}"
     return with_unit
 
@@ -102,9 +101,8 @@ def interest(principal, rate, periods):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    import math
-    final_amt = math.floor(principal + int(principal) * rate * int(periods))
-    return final_amt
+    interest = int(principal + (principal * rate * periods))
+    return interest
 
 def body_mass_index(weight, height):
     '''Body Mass Index.
